@@ -1,0 +1,22 @@
+<%-include("partials/header");-%>
+
+
+<h1>Update</h1>
+
+<form class="" action="/update0.2" method="post">
+  <div class="form-group">
+    <label for="Title">Title</label>
+    <input class="form-control " autocomplete="off" name="title" type="text" value=<%=posts.name%>>
+<label for="post">Post</label>
+    <textarea class="form-control " name="text" id="exampleFormControlTextarea1" rows="5"><%=posts.content%></textarea>
+
+  </div>
+
+
+    <button class="btn btn-lg " type="submit" name="button">Save </button>
+
+  </form>
+
+
+
+<%-include("partials/footer");-%>

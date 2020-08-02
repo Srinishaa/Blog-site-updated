@@ -5,7 +5,9 @@
   <%=post%>
 </p>
 <form class="" action="/delete" method="post">
-<button type="submit" class="btn btn2 btn-lg "aria-pressed="true" name="btn2" value="<%=title%>">Delete</button>  
+<button type="submit" class="btn btn2 btn-lg "aria-pressed="true" name="btn2" value="<%=title%>">Delete</button>
 </form>
-
+<form class="" action="/update" method="post">
+<button type="submit" class="btn btn3 btn-lg "aria-pressed="true" name="btn3" value="<%=title%>">Update</button>
+</form>
 <%-include("partials/footer");-%>

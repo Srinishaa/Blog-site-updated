@@ -68,4 +68,9 @@ border-radius: 50%;
 }
 .btn2{
   background-color:red;
+  float:right;
+}
+.btn3{
+    background-color:#1abc9c;
+
 }

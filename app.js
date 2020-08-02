@@ -20,6 +20,7 @@ const postSchema = new mongoose.Schema({
   content: String
 });
 let blogs;
+let pname;
 const Post = mongoose.model("Post", postSchema);
 const Blog = mongoose.model("Blog", postSchema);
 // const post1 = new Post({
@@ -117,12 +118,21 @@ app.post("/compose", function(req, res) {
 
 
 })
+app.post("/update0.2", function(req, res) {
+   Blog.update(
+    {name: pname},
+    {name: req.body.title,content: req.body.text},(function(err){
+    if(!err){
+        res.redirect("/");
+    }
+})
+)
+})
 
 app.get("/compose", function(req, res) {
-  res.render("compose", {
-
-  });
+  res.render("compose", {});
 });
+
 app.post("/delete",function(req,res){
 // console.log(req.body.btn2);
 Blog.deleteOne({name:req.body.btn2},function(err){
@@ -130,14 +140,20 @@ Blog.deleteOne({name:req.body.btn2},function(err){
     res.redirect("/")
   }
 })
-
 })
+app.post("/update", function(req, res) {
+  blogs.forEach(function(post){
+    if(post.name==req.body.btn3){
+      // console.log(post);
+      pname=post.name;
+      res.render("update", {
+      posts:post
+      });
+    }
+  })
 
-
-
-
-
-
+});
 app.listen(process.env.PORT||3000, function() {
   console.log("Server started on port 3000");
 });
+// https://sheltered-atoll-85459.herokuapp.com/
