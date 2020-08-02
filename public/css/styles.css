@@ -36,7 +36,7 @@ font-weight: bold;
 
 .footer {
   font-style: italic;
-	position: absolute;
+	position: fixed;
 	text-align: center;
 	bottom: 0;
 	width: 100%;
@@ -65,4 +65,7 @@ border-radius: 50%;
 }
 .icon{
   text-align: center;
+}
+.btn2{
+  background-color:red;
 }

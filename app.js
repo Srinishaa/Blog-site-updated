@@ -109,8 +109,13 @@ app.post("/compose", function(req, res) {
     name: req.body.title,
     content: req.body.text
   });
-  blog.save();
-  res.redirect("/");
+  blog.save(function(err){
+    if(!err){
+        res.redirect("/");
+    }
+});
+
+
 })
 
 app.get("/compose", function(req, res) {
@@ -118,6 +123,15 @@ app.get("/compose", function(req, res) {
 
   });
 });
+app.post("/delete",function(req,res){
+// console.log(req.body.btn2);
+Blog.deleteOne({name:req.body.btn2},function(err){
+  if(!err){
+    res.redirect("/")
+  }
+})
+
+})
 
 
 
