@@ -22,22 +22,22 @@ const postSchema = new mongoose.Schema({
 let blogs;
 const Post = mongoose.model("Post", postSchema);
 const Blog = mongoose.model("Blog", postSchema);
-const post1 = new Post({
-  name:"homeStartingContent",
-  content: "Hello there!Welcome to your very own Blog site!!A blog (a truncation of 'weblog') is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts).Blog can also be used as a verb, meaning to maintain or add content to a blog.Record all the exciting moments of your life in a written format and share it with world."
-});
-const post2 = new Post({
-  name:"aboutContent",
-  content: "Hi! My name is Nisha and I have specially curated this blog-site for you to record all your thoughts and cherished memories and share it with the world. I strongly believe every individual's positive insights can make a huge impact in shaping the future.Blogging helps manage your online identity and build trust, improve your writting skills, connect with different people, express your knowledge and much more. Happy Blogging!"
-});
-const post3 = new Post({
-  name:"contactContent",
-  content: "I hope you are having a great experience with the Blog-site. I am junior full stack web developer and would love to make your web projects come to life. You can get in touch with me for more info :)"
-});
-
-post1.save();
-post2.save();
-post3.save();
+// const post1 = new Post({
+//   name:"homeStartingContent",
+//   content: "Hello there!Welcome to your very own Blog site!!A blog (a truncation of 'weblog') is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts).Blog can also be used as a verb, meaning to maintain or add content to a blog.Record all the exciting moments of your life in a written format and share it with world."
+// });
+// const post2 = new Post({
+//   name:"aboutContent",
+//   content: "Hi! My name is Nisha and I have specially curated this blog-site for you to record all your thoughts and cherished memories and share it with the world. I strongly believe every individual's positive insights can make a huge impact in shaping the future.Blogging helps manage your online identity and build trust, improve your writting skills, connect with different people, express your knowledge and much more. Happy Blogging!"
+// });
+// const post3 = new Post({
+//   name:"contactContent",
+//   content: "I hope you are having a great experience with the Blog-site. I am junior full stack web developer and would love to make your web projects come to life. You can get in touch with me for more info :)"
+// });
+//
+// post1.save();
+// post2.save();
+// post3.save();
 
 
 
