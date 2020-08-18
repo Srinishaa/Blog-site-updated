@@ -10,8 +10,10 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 const _ = require("lodash");
+require("dotenv").config();
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://admin_nisha:Star123@cluster0.waeg9.mongodb.net/blogDB", {
+const password=process.env.password;
+mongoose.connect("mongodb+srv://admin_nisha:"+password+"@cluster0.waeg9.mongodb.net/blogDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
