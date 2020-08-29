@@ -1,0 +1,32 @@
+<%-include("partials/header");-%>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/login.css">
+<div class="container row">
+  <div class="col-sm-6 desc">
+    <p class=" ">
+      Start writing your very own blog today!Login to compose,update and delete your blogs and publish them anonymously.
+    </p>
+  </div>
+  <div class="col-sm-6 login-page">
+    <div class="form">
+      <form class="login-form" method='POST' action="register">
+        <input type="text" autocomplete="off" name="username" placeholder="Username" />
+        <input type="password" autocomplete="off" name="password" placeholder="Password" />
+        <button>Register</button>
+    </div>
+    <div class="form">
+      </form>
+      <form class="login-form" method='POST' action="login">
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="password" autocomplete="off" placeholder="Password" />
+        <button>login</button>
+      </form>
+    </div>
+      <div class="form">
+        <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+          <i class="fab fa-google"></i>
+          Sign In with Google
+        </a>
+      </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-<%-include("partials/header");-%>
+<%-include("../partials/header-private.ejs");-%>
 
 
   <h1>Home</h1>
@@ -8,11 +8,11 @@
   <%posts.forEach((x) => {%>
     <%x.posts.forEach(function(y){%>
     <h1><%=y.name%></h1>
-    <%=y.content.slice(0,100)%> ...<a href="posts/<%=y._id%>">Read more</a>
+    <p>
+    <%=y.content.slice(0,100)%> ...<a href="post/<%=y._id%>">Read more</a>
   </p>
   <%})%>
   <%});%>
 
-  <p>
   </body>
-<%-include("partials/footer");-%>
+<%-include("../partials/footer");-%>
